@@ -14,8 +14,8 @@ let newOrderPopUp = new NewOrderPopUp();
 describe('Generating a New Order of codes which may be sectioned or not: ', function() {
 
     beforeAll(function() {
-        //credentials needs to be moved to separate file
-        loginPage.signIn('AlinaSng','LsOg1asdjhhh');
+        let params = browser.params;
+        loginPage.signIn(params.login.user, params.login.password);
     });
 
     it('should generate a New Order of codes which is sectioned', function() {
